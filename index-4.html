@@ -46,8 +46,8 @@
                 <li><a href="index-1.html">SOBRE NOSOTROS</a></li>
                  <li class="sub-menu"><a href="#">PRODUCTOS</a>
                     <ul class="submenu">
-                        <li><a href="index-3.html">CEREALES</a></li>
                         <li><a href="index-3.html">COMPLEMENTOS NUTRICIONALES</a></li>
+                        <li><a href="index-3.html">CEREALES</a></li>
                         <li><a href="index-3.html">CONFITERÍA</a></li>
                     </ul>
                 </li>
@@ -72,20 +72,38 @@
         <div class="row">
             <section class="formBox clearfix">
                 <article class="col-lg-4 col-md-4 col-sm-4 info">
-                    <h2>Postal Address</h2>
-                    <p><strong>Address 1:</strong><br>8901 Marmora Road, Glasgow, D04 89GR.</p>
-                    <p>Telephones:<br>+1 800 559 6580<br>+1 959 603 6035<br>+1 504 889 9898</p>
-                    <p><strong>Address 2:</strong><br>9867 Mill Road, Cambridge, MG09 99HT</p>
+                    <h2>Datos de Contacto</h2>
+                    <p><strong>Teléfonos:</strong><br>(01)-5753371</p>
+                    <p><strong>E-mails:</strong><br>grupozana@hotmail.com</p>
+                    <p><strong>Facebook:</strong><br><a href="https://www.facebook.com/lacasamarimiel" class="btn btn-primary"><i class="glyphicon glyphicon-thumbs-up"></i> La Casa Marimiel</a></p>
+                    <div>
+                            <div class="fb-page" data-href="https://www.facebook.com/lacasamarimiel/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                <blockquote cite="https://www.facebook.com/lacasamarimiel/" class="fb-xfbml-parse-ignore">
+                                    <a href="https://www.facebook.com/lacasamarimiel/">La Casa Marimiel</a>
+                                </blockquote>
+                            </div>
+                            <div id="fb-root"></div>
+                            <script>(function(d, s, id) {
+                              var js, fjs = d.getElementsByTagName(s)[0];
+                              if (d.getElementById(id)) return;
+                              js = d.createElement(s); js.id = id;
+                              js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.0';
+                              fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));</script>
+<script src="js/bootstrap.min.js"></script>
+                            
+                           
+                    </div>
                 </article>
                 <article class="col-lg-8 col-md-8 col-sm-8">
-                    <h2>Contact Form</h2>
+                    <h2>Formulario de Contacto</h2>
                     <form id="contact-form">
                         <div class="success"> Contact form submitted! <strong>We will be in touch soon.</strong> </div>
                         <fieldset>
                             <div class="holder">
                                 <div class="form-div-1 clearfix">
                                     <label class="name">
-                                    <input type="text" value="Name:">
+                                    <input type="text" value="Nombre:">
                                     <br>
                                     <span class="error">*This is not a valid name.</span> <span class="empty">*This field is required.</span> </label>
                                 </div>
@@ -97,20 +115,29 @@
                                 </div>
                                 <div class="form-div-3 clearfix">
                                     <label class="phone">
-                                    <input type="tel" value="Phone:">
+                                    <input type="tel" value="Teléfono:">
                                     <br>
                                     <span class="error">*This is not a valid phone number.</span> <span class="empty">*This field is required.</span> </label>
                                 </div>
                             </div>
+                            <div class="holder">
+                                <div class="form-div-4 clearfix">
+                                    <label class="asunto">
+                                    <input type="asunto" value="Asunto:">
+                                    <br>
+                                    <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span>
+                                    </label>
+                                </div>
+                            </div>
                             <div class="form-div-4 clearfix">
                                 <label class="message">
-                                <textarea>Message:</textarea>
+                                <textarea>Mensaje:</textarea>
                                 <br>
                                 <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span>
                                 </label>
                             </div>
                             <div class="btns">
-                                <a href="#" data-type="submit" class="btn-default btn2">Submit</a>
+                                <a href="#" data-type="submit" class="btn btn-warning">Enviar</a>
                             </div>
                         </fieldset>
                     </form>
@@ -156,6 +183,24 @@
         </div>
     </div>
 </footer>
-<script src="js/bootstrap.min.js"></script>
+
 </body>
+<script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId            : 'your-app-id',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v3.0'
+          });
+        };
+      
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
 </html>

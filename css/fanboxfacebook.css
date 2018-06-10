@@ -1,0 +1,27 @@
+.s_likebox {
+float:right; /* Indicamos que flotara en la parte derecha*/ 
+width:288px; /* Ancho */
+height:345px; /* Alto */
+background: url(https://lh6.googleusercontent.com/-VW_GzzYnZJ0/TkiZQFcBc2I/AAAAAAAABmg/fa9_qWV8Cu4/fb_bg.png) no-repeat !important; /* El fondo de la pestaña, en este caso utilizamos una imagen */
+display:block;
+right:-250px;
+padding:0;
+position:fixed;
+top: 130px;
+z-index:1002;
+border-radius:10px;
+-moz-border-radius:10px; 
+-webkit-border-radius:10px; 
+}
+div.likeboxwrap {
+margin-top:2px;
+margin-left:-5px;
+width:238px; 
+height:325px;
+background-color:#fff;
+overflow:hidden;
+border-radius:10px;
+-moz-border-radius:10px; 
+-webkit-border-radius:10px; 
+}
+div.likeboxwrap iframe {margin:-1px}

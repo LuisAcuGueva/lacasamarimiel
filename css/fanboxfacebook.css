@@ -1,7 +1,7 @@
 .s_likebox {
 float:right; /* Indicamos que flotara en la parte derecha*/ 
 width:300px; /* Ancho */
-height:234px; /* Alto */
+height:174px; /* Alto */
 background: url(../img/fb_bg.png) no-repeat !important; /* El fondo de la pesta�a, en este caso utilizamos una imagen */
 display:block;
 right:-262px;
@@ -17,7 +17,7 @@ div.likeboxwrap {
 margin-top:2px;
 margin-left:-5px;
 width:250px; 
-height:214px;
+height:154px;
 background-color:#fff;
 overflow:hidden;
 border-radius:10px;

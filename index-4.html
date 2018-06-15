@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <title>contacts</title>
-<meta charset="utf-8">    
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
@@ -13,6 +13,7 @@
 <!--CSS-->
 <link rel="stylesheet" href="css/bootstrap.css" >
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/sweetalert2.min.css">
 <link rel="stylesheet" href="css/OpenSans300.css">
 <link rel="stylesheet" href="css/OpenSans400.css">
 <link rel="stylesheet" href="css/OpenSans600.css">
@@ -74,7 +75,13 @@
                 <article class="col-lg-4 col-md-4 col-sm-4 info">
                     <h2>Datos de Contacto</h2>
                     <p><strong>Teléfonos:</strong><br>(01)-5753371</p>
-                    <p><strong>E-mails:</strong><br>grupozana@hotmail.com</p>
+                    <p><strong>E-mails:</strong><br>
+                        SECCIÓN VENTAS:<br>
+                        ventas@lacasamarimiel.com<br>
+                        grupozana@hotmail.com<br><br>
+                        ADMINISTACIÓN:<br>
+                        luisjimenez@lacasamarimiel.com<br>
+                    </p>
                     <p><strong>Facebook:</strong><br>
                         <div>
                             <div class="fb-page" data-href="https://www.facebook.com/lacasamarimiel/" data-tabs="timeline, messages" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
@@ -88,49 +95,44 @@
                 <article class="col-lg-8 col-md-8 col-sm-8">
                     <h2>Formulario de Contacto</h2>
                     <p>Si desea contactarse con nuestra empresa, sírvase llenar sus datos en nuestro formulario y nos estaremos comunicando con usted lo mas pronto posible. También puede contactarse con nosotros llamando a nuestra central telefónica o enviándonos un correo electrónico a nuestro e-mail alternativo.</p>
-                    <form id="contact-form">
-                        <div class="success"> Contact form submitted! <strong>We will be in touch soon.</strong> </div>
-                        <fieldset>
+                    <form id="contact-form" class="formulario-contacto" action="enviar.php" method="post">
                             <div class="holder">
                                 <div class="form-div-1 clearfix">
-                                    <label class="name">
-                                    <input type="text" value="Nombre:">
-                                    <br>
-                                    <span class="error">*This is not a valid name.</span> <span class="empty">*This field is required.</span> </label>
+                                    <label for="name"class="name">
+                                    <input id="name" type="text" name="name" placeholder="Nombre:" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Nombre:'" required>
+                                    </label>
                                 </div>
                                 <div class="form-div-2 clearfix">
-                                    <label class="email">
-                                    <input type="email" value="E-mail:">
-                                    <br>
-                                    <span class="error">*This is not a valid email address.</span> <span class="empty">*This field is required.</span> </label>
+                                    <label for="email" class="email">
+                                    <input id="email" type="email" name="email" placeholder="E-mail:" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'E-mail:'"  required>
+                                    </label>
                                 </div>
                                 <div class="form-div-3 clearfix">
-                                    <label class="phone">
-                                    <input type="tel" value="Teléfono:">
-                                    <br>
-                                    <span class="error">*This is not a valid phone number.</span> <span class="empty">*This field is required.</span> </label>
+                                    <label for="phone" class="phone">
+                                    <input id="phone" type="tel" name="phone" placeholder="Teléfono:" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Teléfono:'">
+                                    </label>
                                 </div>
                             </div>
                             <div class="holder">
                                 <div class="form-div-4 clearfix">
-                                    <label class="asunto">
-                                    <input type="asunto" value="Asunto:">
-                                    <br>
-                                    <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span>
+                                    <label for="asunto" class="asunto">
+                                    <input id="asunto" type="asunto" name="asunto" placeholder="Asunto:" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Asunto:'" required>
                                     </label>
                                 </div>
                             </div>
-                            <div class="form-div-4 clearfix">
-                                <label class="message">
-                                <textarea>Mensaje:</textarea>
-                                <br>
-                                <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span>
+                            <div class="holder">
+                                <label for="message" class="message">
+                                <textarea id="message" name="message" placeholder="Mensaje:" minlength="20" maxlength="1000" onfocus="this.placeholder = ''"
+                                onblur="this.placeholder = 'Mensaje:'" required></textarea>
                                 </label>
                             </div>
-                            <div class="btns">
-                                <a href="#" data-type="submit" class="btn btn-warning">Enviar</a>
+                            <div class="form-group">
+                                <button type="submit"  class="btn btn-warning" value="submit">Enviar E-mail</button>
                             </div>
-                        </fieldset>
                     </form>
                 </article>
             </section>
@@ -176,6 +178,11 @@
 </footer>
 </body>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/sweetalert2.all.min.js"></script>
+  <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+  <script src="https://unpkg.com/promise-polyfill"></script>
+<script src="js/forms.js"></script>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];

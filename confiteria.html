@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--Fanbox flotante-->
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery.noConflict();
+jQuery(function (){
+jQuery(".s_likebox").hover(function(){
+jQuery(".s_likebox").stop(true, false).animate({right:"0"},"medium");
+},function(){
+jQuery(".s_likebox").stop(true, false).animate({right:"-262"},"medium");
+},500);
+return false;
+});
+</script>
+<!--Fin Fanbox flotante-->    
 <head>
-<title>products</title>
+<title>CONFITERIA</title>
 <meta charset="utf-8">    
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -17,6 +31,7 @@
 <link rel="stylesheet" href="css/OpenSans600.css">
 <link rel="stylesheet" href="css/OpenSans700.css">
 <link rel="stylesheet" href="css/OpenSans800.css">
+<link rel="stylesheet" href="css/fanboxfacebook.css" >
 <!--JS-->
 <script src="js/jquery.js"></script>
 <script src="js/jquery-migrate-1.2.1.js"></script>
@@ -41,24 +56,25 @@
         <nav class="navbar navbar-default navbar-static-top tm_navbar" role="navigation">
             <ul class="nav sf-menu clearfix">
                 <li><a href="index.html">INICIO</a></li>
-                <li><a href="index-1.html">SOBRE NOSOTROS</a></li>
-                <li class="sub-menu active"><a href="index-2.html">PRODUCTOS<div style="text-align: center"><span></span></div></a>
+                <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
+                <li class="sub-menu active"><a href="productos.html">PRODUCTOS<div style="text-align: center"><span></span></div></a>
                     <ul class="submenu">
-                        <li><a href="index-3.html">COMPLEMENTOS NUTRICIONALES</a></li>
-                        <li><a href="index-3.html">CEREALES</a></li>
-                        <li><a href="index-3.html">CONFITERÍA</a></li>
+                        <li><a href="harinas.html">HARINAS</a></li>
+                        <li><a href="cereales.html">CEREALES</a></li>
+                        <li><a href="confiteria.html">CONFITERÍA</a></li>
                     </ul>
                 </li>
-                <li><a href="index-4.html">CONTACTO</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
             </ul>
              <select class="select-menu" onchange="location = this.value">
                 <option value="#">Ir a...</option>
                 <option value="index.html">INICIO</option>
-                <option value="index-1.html">SOBRE NOSOTROS</option>
-                <option value="index-3.html" selected="selected">PRODUCTOS: COMPLEMENTOS NUTRICIONALES</option>
-                <option value="index-3.html">PRODUCTOS: CEREALES</option>
-                <option value="index-3.html">PRODUCTOS: CONFITERÍA</option>
-                <option value="index-4.html">CONTACTO</option>
+                <option value="nosotros.html">SOBRE NOSOTROS</option>
+                <option value="productos.html">PRODUCTOS</option>
+                <option value="harinas.html">PRODUCTOS: HARINAS</option>
+                <option value="cereales.html">PRODUCTOS: CEREALES</option>
+                <option value="confiteria.html" selected="selected">PRODUCTOS: CONFITERÍA</option>
+                <option value="contacto.html">CONTACTO</option>
             </select>
         </nav>
     </div>
@@ -69,7 +85,7 @@
     <div class="container">
         <div class="row">
             <article class="col-lg-12 col-md-12 col-sm-12 servicesBox">
-                <h2>featured products</h2>
+                <h2>CONFITERÍA</h2>
                 <div class="row">
                     <article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 services-box maxheight">
                         <div class="thumb-pad3">
@@ -199,17 +215,17 @@
                     </article>
                     <article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 maxheight2">
                         <ul class="list1">
-                            <li><a href="index-1.html">Sobre Nosotros</a></li>
+                            <li><a href="nosotros.html">Sobre Nosotros</a></li>
                         </ul>
                     </article>
                     <article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 maxheight2">
                         <ul class="list1">
-                            <li><a href="index-3.html">Productos</a></li>
+                            <li><a href="productos.html">Productos</a></li>
                         </ul>
                     </article>
                     <article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 maxheight2">
                         <ul class="list1">
-                            <li><a href="index-4.html">Contacto</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
                         </ul>
                     </article>
                 </div>
@@ -224,5 +240,25 @@
     </div>
 </footer>
 <script src="js/bootstrap.min.js"></script>
+<div class="s_likebox"><div style="color: rgb(255, 255, 255); padding: 8px 5px 0pt 50px;">
+        <span>
+            <div class='likeboxwrap'>
+                <div class="fb-page" data-href="https://www.facebook.com/lacasamarimiel/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/lacasamarimiel/" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/lacasamarimiel/">La Casa Marimiel</a>
+                    </blockquote>
+                </div>
+            </div>
+        </span>
+    </div>
 </body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.0';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 </html>

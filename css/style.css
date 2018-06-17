@@ -49,6 +49,12 @@ h2{
 	margin:0 0 24px 0;text-transform:uppercase;
 	letter-spacing:1px;text-shadow:2px 2px 0px rgba(115,9,9,0.18);
 }
+h4{
+	color:#ffffff;
+	font:800 18px/18px 'Open Sans';
+	margin:0 0 24px 0;text-transform:uppercase;
+	letter-spacing:1px;text-shadow:2px 2px 0px rgba(115,9,9,0.18);
+}
 h3{
 	color:#ffffff;
 	font:800 29px/32px 'Open Sans';
